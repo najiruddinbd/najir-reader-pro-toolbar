@@ -1,0 +1,55 @@
+#nr-toolbar{
+    position:fixed;
+    top:40%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    opacity:0;
+    pointer-events:none;
+    transition:all 0.4s ease;
+    z-index:9999;
+}
+
+#nr-toolbar.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+#nr-toolbar button{
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    border-radius:8px;
+    transition:0.3s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    line-height:1;
+    text-align:center;
+}
+
+#nr-toolbar button:hover{
+    transform:scale(1.08);
+}
+
+/* Mobile */
+@media(max-width:768px){
+    #nr-toolbar{
+        flex-direction: row !important;
+
+        bottom:10px;
+        top:auto;
+
+        width:auto;
+        padding:6px 10px;
+
+        border-radius:12px;
+
+        justify-content:center;
+        align-items:center;
+    }
+}
+}
